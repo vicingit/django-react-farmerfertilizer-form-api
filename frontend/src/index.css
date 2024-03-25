@@ -1,5 +1,7 @@
 /* index.css */
-
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 /* Header styling */
 .header {
     background-color: #333;
