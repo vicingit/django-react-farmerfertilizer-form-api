@@ -14,3 +14,5 @@ The React frontend displays the fertilizer recommendation to the user.
 Yes
 changed
 
+pip install -r requirements.txt
+npm install
