@@ -8,6 +8,7 @@ function FertilizerForm() {
     const handleSubmit = async (e) => {
         e.preventDefault();
         const formData = new FormData(e.target);
+        console.log('FormData', formData)
         try {
             const response = await axios.post('http://localhost:8000/api/fertilizer/', formData);
             setRecommendation(response.data.prediction);
