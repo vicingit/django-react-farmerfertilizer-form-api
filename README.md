@@ -1,18 +1,43 @@
-# Django React Integration
+# 🌱 Fertilizer Recommendation System
 
-Workflow Overview:
-User fills out the form in the React frontend with the input data (Temperature, Humidity, Moisture, etc.).
+An integrated web application that provides fertilizer recommendations based on environmental conditions like temperature, humidity, soil type, and crop type. The system uses a **React** frontend and a **Django** backend, with a prediction logic script (`predict.py`).
 
-When the user submits the form, a POST request is sent to the Django backend.
+---
 
-The Django backend receives the input data and uses the predict.py script to make a fertilizer recommendation based on the input data.
+## 🧠 How It Works
 
-The backend sends the recommendation back to the frontend as a response to the POST request.
+1. The user fills out a form in the **React frontend** with environmental data:
+   - Temperature
+   - Humidity
+   - Moisture
+   - Soil Type
+   - Crop Type
+2. On submission, a **POST** request is sent to the **Django backend**.
+3. The backend processes the data using logic defined in `predict.py` to generate a fertilizer recommendation.
+4. The response is sent back to the frontend and displayed to the user.
 
-The React frontend displays the fertilizer recommendation to the user.
+---
 
-Yes
-changed
+## ⚙️ Tech Stack
 
+| Layer     | Technology   |
+|-----------|--------------|
+| Frontend  | React (JavaScript) |
+| Backend   | Django (Python)    |
+| API       | REST (Django REST Framework) |
+| ML Logic  | Custom script (`predict.py`) |
+| Communication | Axios or Fetch API |
+
+---
+
+## 🛠️ Installation & Setup
+
+### 🔙 Backend (Django)
+
+```bash
+cd backend
+python -m venv venv
+source venv/bin/activate  # On Windows: venv\Scripts\activate
 pip install -r requirements.txt
-npm install
+python manage.py migrate
+python manage.py runserver
